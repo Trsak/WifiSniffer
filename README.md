@@ -2,6 +2,12 @@
 This tool sniffs Wi-Fi data packets between selected client and access point. 
 To sniff data, you have to know password or key used for encryption on given access point (in case of WEP, WPA-PSK and WPA2-PSK). Other encryptions are not supported.
 
+## Program flow
+1. Start sniffing by setting network interface to use monitor mode and filter Wi-Fi packets.
+1. Collect beacon frame and detect used encryption.
+1. If WPA or WPA 2 is used, try to deauthenticate client and wait for 4-way auth handshake. If only passive mode is toggled, then program just waits for 4-way auth handshake.
+1. Start sniffing data packets and save them to output file.
+
 ## Requirements
 Installing Libpcap and Libtins libraries is required:
 ```
