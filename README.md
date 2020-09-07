@@ -29,3 +29,22 @@ For example, if we want to sniff communication between client with MAC adress `3
 ```
 ./sniffer -i wlp6s0 -m 3C-3D-BD-60-FE-58 -b F8-87-5F-A8-DD-26 -k y8THwDXNwRYH9kdU
 ```
+
+## Program arguments
+### Required
+
+* `-i INTERFACE_NAME` - Network interface name.
+* `-m BSSID` - Access point BSSID.
+* `-b CLIENT_MAC` - Client MAC address.
+
+### Optional
+
+* `-h` - Prints program help.
+* `-k ENCRYPTION_KEY` - Encryption key.
+* `-f SAVE_PCAP_FILE_LOCATION` - Location of the output pcap file containing captured packets.
+* `-p` - Toggles passive attack only.
+* `-l` - Toggles libpcap library for sniffing.
+* `-t` - Toggles libtins library for sniffing.
+
+## Output
+Program saves all captured and decrypted data packets in `.pcap` file.
