@@ -30,7 +30,7 @@ To run program and display help:
 ./sniffer -h
 ```
 
-## Example usage
+## Usage example
 For example, if we want to sniff communication between client with MAC adress `3C-3D-BD-60-FE-58` and access point with BSSID `F8-87-5F-A8-DD-26` that uses WPA2 encryption with key `y8THwDXNwRYH9kdU`. In this example, `wlp6s0` network interface is used for monitoring mode.
 ```
 ./sniffer -i wlp6s0 -m 3C-3D-BD-60-FE-58 -b F8-87-5F-A8-DD-26 -k y8THwDXNwRYH9kdU
